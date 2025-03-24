@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Health - WellnessPath</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="track.html">Track</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Track Your Health</h1>
+
+      <section>
+        <h2>Water</h2>
+        <input type="number" id="water" placeholder="Glasses of water" />
+        <button onclick="logWater()">Log Water</button>
+      </section>
+
+      <section>
+        <h2>Exercise</h2>
+        <input
+          type="text"
+          id="exercise"
+          placeholder="Workout type or duration"
+        />
+        <button onclick="logExercise()">Log Exercise</button>
+      </section>
+
+      <section>
+        <h2>Food</h2>
+        <input type="text" id="food" placeholder="Meal or calories" />
+        <button onclick="logFood()">Log Food</button>
+      </section>
+
+      <section>
+        <h2>Sleep</h2>
+        <input type="number" id="sleep" placeholder="Hours slept" />
+        <button onclick="logSleep()">Log Sleep</button>
+      </section>
+
+      <section>
+        <h2>Mindfulness</h2>
+        <input
+          type="text"
+          id="mindfulness"
+          placeholder="Meditation / Journaling"
+        />
+        <button onclick="logMindfulness()">Log Mindfulness</button>
+      </section>
+    </main>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
