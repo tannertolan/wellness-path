@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up - WellnessPath</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/track/">Track</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/signup/">Sign Up</a></li>
+          <li><a href="/login/">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        style="
+          max-width: 600px;
+          margin: auto;
+          padding: 2rem;
+          background: white;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <h1>Sign Up</h1>
+
+        <form method="post">
+          {% csrf_token %}
+
+          <div style="margin-bottom: 1rem">
+            <label for="id_username">Username:</label><br />
+            {{ form.username }}
+          </div>
+
+          <div style="margin-bottom: 1rem">
+            <label for="id_password1">Password:</label><br />
+            {{ form.password1 }}
+          </div>
+
+          <div style="margin-bottom: 1rem">
+            <label for="id_password2">Password Confirmation:</label><br />
+            {{ form.password2 }}
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="{% static 'tracker/js/app.js' %}"></script>
+  </body>
+</html>

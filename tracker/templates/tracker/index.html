@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - WellnessPath</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/track/">Track</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/signup/">Sign Up</a></li>
+          <li><a href="/login/">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Welcome to WellnessPath</h1>
+      <p>
+        WellnessPath is your personal health buddy — track your water, exercise,
+        food, sleep, and mindfulness easily every day!
+      </p>
+      <p>Sign up or log in to start building better habits today.</p>
+    </main>
+
+    <script src="{% static 'tracker/js/app.js' %}"></script>
+  </body>
+</html>

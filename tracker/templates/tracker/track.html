@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Track Health - WellnessPath</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/track/">Track</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/signup/">Sign Up</a></li>
+          <li><a href="/login/">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Track Your Health</h1>
+
+      <section>
+        <h2>Water Intake</h2>
+        <input type="text" id="water" placeholder="e.g. 8 cups" />
+        <button onclick="logValue('water')">Log Water</button>
+        <button onclick="clearValue('water')">Clear Water</button>
+        <p id="water-display"></p>
+      </section>
+
+      <section>
+        <h2>Exercise</h2>
+        <input type="text" id="exercise" placeholder="e.g. 30 min run" />
+        <button onclick="logValue('exercise')">Log Exercise</button>
+        <button onclick="clearValue('exercise')">Clear Exercise</button>
+        <p id="exercise-display"></p>
+      </section>
+
+      <section>
+        <h2>Food</h2>
+        <input type="text" id="food" placeholder="e.g. Salad, Chicken" />
+        <button onclick="logValue('food')">Log Food</button>
+        <button onclick="clearValue('food')">Clear Food</button>
+        <p id="food-display"></p>
+      </section>
+
+      <section>
+        <h2>Sleep</h2>
+        <input type="text" id="sleep" placeholder="e.g. 7 hours" />
+        <button onclick="logValue('sleep')">Log Sleep</button>
+        <button onclick="clearValue('sleep')">Clear Sleep</button>
+        <p id="sleep-display"></p>
+      </section>
+
+      <section>
+        <h2>Mindfulness</h2>
+        <input
+          type="text"
+          id="mindfulness"
+          placeholder="e.g. 10 min meditation"
+        />
+        <button onclick="logValue('mindfulness')">Log Mindfulness</button>
+        <button onclick="clearValue('mindfulness')">Clear Mindfulness</button>
+        <p id="mindfulness-display"></p>
+      </section>
+
+      <section>
+        <h2>📊 Your Logged Habits</h2>
+        <div id="summary-output"></div>
+      </section>
+    </main>
+
+    <script src="{% static 'tracker/js/app.js' %}"></script>
+  </body>
+</html>

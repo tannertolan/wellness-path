@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About WellnessPath</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/track/">Track</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/signup/">Sign Up</a></li>
+          <li><a href="/login/">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>About WellnessPath</h1>
+      <p>
+        WellnessPath is built to make health tracking simple and motivating. No
+        overwhelming graphs or complicated setups — just a clear and friendly
+        way to improve your daily habits.
+      </p>
+    </main>
+
+    <script src="{% static 'tracker/js/app.js' %}"></script>
+  </body>
+</html>
